@@ -15,6 +15,10 @@
 		3F83400D1AD7CB64007834E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F83400C1AD7CB64007834E9 /* Images.xcassets */; };
 		3F8340101AD7CB64007834E9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F83400E1AD7CB64007834E9 /* LaunchScreen.xib */; };
 		3F83401C1AD7CB64007834E9 /* contactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F83401B1AD7CB64007834E9 /* contactsTests.m */; };
+		3F8340271AD7CCD6007834E9 /* Person.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F8340251AD7CCD6007834E9 /* Person.xcdatamodeld */; };
+		3F83402A1AD7CD8C007834E9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8340291AD7CD8C007834E9 /* Person.m */; };
+		3F83402D1AD7D28C007834E9 /* personTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F83402C1AD7D28C007834E9 /* personTableViewController.m */; };
+		3F8340301AD7E379007834E9 /* newPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F83402F1AD7E379007834E9 /* newPersonViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,13 @@
 		3F8340151AD7CB64007834E9 /* contactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F83401A1AD7CB64007834E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F83401B1AD7CB64007834E9 /* contactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = contactsTests.m; sourceTree = "<group>"; };
+		3F8340261AD7CCD6007834E9 /* Person.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Person.xcdatamodel; sourceTree = "<group>"; };
+		3F8340281AD7CD8C007834E9 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		3F8340291AD7CD8C007834E9 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		3F83402B1AD7D28C007834E9 /* personTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = personTableViewController.h; sourceTree = "<group>"; };
+		3F83402C1AD7D28C007834E9 /* personTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = personTableViewController.m; sourceTree = "<group>"; };
+		3F83402E1AD7E379007834E9 /* newPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newPersonViewController.h; sourceTree = "<group>"; };
+		3F83402F1AD7E379007834E9 /* newPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newPersonViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +102,14 @@
 				3F83400C1AD7CB64007834E9 /* Images.xcassets */,
 				3F83400E1AD7CB64007834E9 /* LaunchScreen.xib */,
 				3F8340031AD7CB64007834E9 /* contacts.xcdatamodeld */,
+				3F8340281AD7CD8C007834E9 /* Person.h */,
+				3F8340291AD7CD8C007834E9 /* Person.m */,
 				3F833FFC1AD7CB64007834E9 /* Supporting Files */,
+				3F8340251AD7CCD6007834E9 /* Person.xcdatamodeld */,
+				3F83402B1AD7D28C007834E9 /* personTableViewController.h */,
+				3F83402C1AD7D28C007834E9 /* personTableViewController.m */,
+				3F83402E1AD7E379007834E9 /* newPersonViewController.h */,
+				3F83402F1AD7E379007834E9 /* newPersonViewController.m */,
 			);
 			path = contacts;
 			sourceTree = "<group>";
@@ -222,10 +240,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F83402A1AD7CD8C007834E9 /* Person.m in Sources */,
 				3F8340021AD7CB64007834E9 /* AppDelegate.m in Sources */,
 				3F833FFF1AD7CB64007834E9 /* main.m in Sources */,
 				3F8340081AD7CB64007834E9 /* ViewController.m in Sources */,
+				3F8340301AD7E379007834E9 /* newPersonViewController.m in Sources */,
 				3F8340051AD7CB64007834E9 /* contacts.xcdatamodeld in Sources */,
+				3F8340271AD7CCD6007834E9 /* Person.xcdatamodeld in Sources */,
+				3F83402D1AD7D28C007834E9 /* personTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +459,16 @@
 			);
 			currentVersion = 3F8340041AD7CB64007834E9 /* contacts.xcdatamodel */;
 			path = contacts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		3F8340251AD7CCD6007834E9 /* Person.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3F8340261AD7CCD6007834E9 /* Person.xcdatamodel */,
+			);
+			currentVersion = 3F8340261AD7CCD6007834E9 /* Person.xcdatamodel */;
+			path = Person.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

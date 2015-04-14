@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Person.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+  // [self createNewPersonWithFirstName:@"Naman" lastname:@"Vaishnav" age:@22];
+    [self readContents];
     return YES;
+}
+
+-(void)createNewPersonWithFirstName:(NSString *)fn lastname:(NSString *)ln age:(NSNumber *)age {
+    Person *person = [NSEntityDescription insertNewObjectForEntityForName:@"Person" inManagedObjectContext:self.managedObjectContext];
+    
+    if (person!=nil) {
+        person.firstName = fn;
+        person.lastName = ln;
+        person.age = age;
+    }
+    
+    [self.managedObjectContext save:nil];
+}
+
+-(void) readContents{
+    NSFetchRequest *fr = [[NSFetchRequest alloc]initWithEntityName:@"Person"];
+    NSArray *people = [self.managedObjectContext executeFetchRequest:fr error:nil];
+    
+    if (people.count > 0) {
+        for (Person *curPerson in people) {
+            NSLog(@"%@,%@,%@",curPerson.firstName,curPerson.lastName,curPerson.age);
+        }
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
